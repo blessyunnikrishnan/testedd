@@ -1,6 +1,14 @@
-<html>
+from flask import Flask, render_template
 
-<body>
-test
-</body>
-</html>
+# Initialize the Flask application
+app = Flask(__name__)
+
+# Define the main route
+@app.route('/')
+def home():
+    # Render the main page
+    return "<h1>Welcome to Blessy's Web Application!</h1><p>This is a simple web application created for you, Blessy!</p>"
+
+# Run the app
+if __name__ == '__main__':
+    app.run(debug=True)
